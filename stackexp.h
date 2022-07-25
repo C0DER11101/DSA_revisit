@@ -55,6 +55,7 @@ int precStack()
 
 
 /* --- POSTFIX FUNCTIONS --- */
+#ifndef FLAG
 void insert(char symbol)
 {
 	++indx;
@@ -66,6 +67,29 @@ void display()
 	printf("\n\nPostfix expression is:\n\n");
 	printf("%s", postfix);
 }
+
+#endif
+/* ---<END>--- */
+
+/* --- PREFIX FUNCTIONS --- */
+#if FLAG==1
+int idx2=-1;
+char prefix[MAX];
+
+void insertpre(char symbol)
+{
+	++idx2;
+	prefix[idx2]=symbol;
+}
+
+void show()
+{
+	printf("\n\nPrefix expression is:\n\n");
+	for(int i=idx2; i>=0; i--)
+		printf("%c", prefix[i]);
+}
+
+#endif
 /* ---<END>--- */
 
 #endif

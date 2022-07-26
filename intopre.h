@@ -91,4 +91,51 @@ void scanexp(char*infx)
 	show();
 }
 
+void evaluate()
+{
+	int a, b;
+
+	for(int i=0; i<=idx2; i++)
+	{
+		switch(prefix[i])
+		{
+			case '+':
+				a=Pop();
+				b=Pop();
+				Push(a+b);
+				break;
+
+			case '-':
+				a=Pop();
+				b=Pop();
+				Push(a-b);
+				break;
+
+			case '*':
+				a=Pop();
+				b=Pop();
+				Push(a*b);
+				break;
+
+			case '/':
+				a=Pop();
+				b=Pop();
+				Push(a/b);
+				break;
+
+			case '^':
+				a=Pop();
+				b=Pop();
+				Push(pow(a, b));
+				break;
+
+			default:
+				Push(prefix[i]-'0');
+		}
+	}
+
+	printf("\n\nvalue of the prefix expression is: %d\n\n", showTop());
+}
+
+
 #endif

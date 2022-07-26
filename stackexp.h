@@ -2,7 +2,6 @@
 #define S_H
 #define MAX 200
 
-#include<string.h>
 
 int top=-1, stack[MAX];
 
@@ -22,6 +21,20 @@ void push(char symbol)
 	stack[top]=symbol;
 }
 
+void Push(int value)
+{
+	top++;
+	stack[top]=value;
+
+}
+
+int Pop()
+{
+	int value=stack[top];
+	top--;
+	return value;
+}
+
 char pop()
 {
 	char symbol;
@@ -30,6 +43,11 @@ char pop()
 	top--;
 
 	return symbol;
+}
+
+int showTop()
+{
+	return stack[top];
 }
 
 int precStack()
@@ -60,6 +78,58 @@ void insert(char symbol)
 {
 	++indx;
 	postfix[indx]=symbol;
+}
+
+void evaluate()
+{
+	int a, b;
+
+	for(int i=0; i<strlen(postfix); i++)
+	{
+		switch(postfix[i])
+		{
+			case '+':
+				a=Pop();
+				b=Pop();
+				
+				Push(b+a);
+				break;
+
+			case '-':
+				a=Pop();
+				b=Pop();
+
+				Push(b-a);
+				break;
+
+			case '/':
+				a=Pop();
+				b=Pop();
+
+				Push(b/a);
+				break;
+
+			case '*':
+				a=Pop();
+				b=Pop();
+
+				Push(b*a);
+				break;
+				
+			case '^':
+				a=Pop();
+				b=Pop();
+
+				Push(pow(b, a));
+				break;
+
+			default:
+				Push(postfix[i]-'0');
+		}
+	}
+
+
+	printf("\n\nthe value of the postfix expression is: %d\n\n", showTop());
 }
 
 void display()

@@ -49,12 +49,18 @@ int main(void)
 				printf("\n\nQuitting....\n\n");
 				terminate(Stack[top]);
 
+				free(infix);
+
 				exit(0);
 
 			default:
 				printf("\n\ninvalid option!!!\n\n");
 		}
 	}
+
+	terminate(Stack[top]);
+
+	free(infix);
 
 	return 0;
 }

@@ -33,6 +33,12 @@ bool createAdjMat(int opt, int numVertices)
 
 			else
 			{
+				/*
+				   in an undirected graph -> edges have no direction, so any two vertices connected are same if taken
+				   in the other way around
+
+				   v0-v1 is same as v1-v0
+				*/
 				adjMatrix[initialVertex][finalVertex]=1;
 				adjMatrix[finalVertex][initialVertex]=1;
 			}

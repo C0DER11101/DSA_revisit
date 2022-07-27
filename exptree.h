@@ -83,7 +83,7 @@ void scanexp(char*infix)
 	display();
 }
 
-void createTree()
+void createTree() // scan the postfix expression from left to right!!
 {
 	for(int i=0; i<strlen(postfix); i++)
 	{

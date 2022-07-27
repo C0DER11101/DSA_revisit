@@ -28,17 +28,22 @@ void Push(char symbol)
 	switch(symbol)
 	{
 		case '-': case '+': case '*': case '/': case '^':
-			n2=Pop();
-			n3=Pop();
+			/* if an operator is encountered then pop two pointers from the stack */
+
+			n2=Pop(); /* first pointer popped */
+			n3=Pop(); /* second pointer popped */
 			n1=(node*)malloc(sizeof(node));
 			n1->symbol=symbol;
-			n1->left=n3;
-			n1->right=n2;
+			n1->left=n3; // pointer popped second becomes the left child
+			n1->right=n2; // pointer popped first becomes the right child 
 			top++;
 			Stack[top]=n1;
 			break;
 
 		default:
+
+			/* operand is encountered then simply push into stack */
+
 			n1=(node*)malloc(sizeof(node));
 			n1->symbol=symbol;
 			n1->left=n1->right=NULL;

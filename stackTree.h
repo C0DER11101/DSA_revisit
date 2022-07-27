@@ -22,9 +22,7 @@ node* Pop()
 
 void Push(char symbol)
 {
-	node*n1;
-	node*n2;
-	node*n3;
+	node*n1, *n2, *n3;
 	switch(symbol)
 	{
 		case '-': case '+': case '*': case '/': case '^':

@@ -3,8 +3,6 @@
 #include "adjlist.h"
 
 // WORKS FOR DIRECTED GRAPH!!
-// CODE WORKS FOR INSERTION OF VERTICES AND EDGES.
-// LOOK AT THE DELETION PARTS(DELETION OF VERTICES AND EDGES)!!!
 int main(void)
 {
 	int opt, vertexVal, initV, dstV;

@@ -295,7 +295,7 @@ Vertex*delEdge(Vertex*vtx, int intV, int dV)
 	if(vi->firstEdge==NULL) // vi doesnot have any edge list
 	{
 		printf("\n%d doesnot have an edgelist!!\n", vi->data);
-		printf("\nfailed to delete %d\n\n", vd->data);
+		printf("\nfailed to delete edge\n\n");
 		return vtx;
 	}
 

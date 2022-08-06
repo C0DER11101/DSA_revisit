@@ -371,6 +371,7 @@ void dispGraph(Vertex*vtx)
 		vtx=vtx->nextVertex;
 	}
 }
+/* ---<END>--- */
 
 /* --- free up memory space --- */
 void terminate(Vertex*vtx)

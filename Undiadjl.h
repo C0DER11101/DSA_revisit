@@ -663,6 +663,8 @@ vertex*terminate(vertex*vtx)
 		vtx=vtx->nextVertex;
 		free(pv);
 	}
+
+	return NULL;
 }
 /* --- <END> --- */
 #endif

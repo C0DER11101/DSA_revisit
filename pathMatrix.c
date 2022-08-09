@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdbool.h>
 #include<stdlib.h>
 #include "DgraphAdjM.h"
 #include "PMatrix.h"
@@ -7,8 +6,6 @@
 int main(void)
 {
 	int numV, opt;
-
-	bool closure=false;
 
 	while(1)
 	{

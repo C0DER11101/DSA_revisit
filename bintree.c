@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include "treeio.h" // tree input output!!
 #include "leaf.h" // used for displaying the leaf nodes of a tree!!
+#include "countNodes.h" // to count the number of nodes in the tree!!
 
 int main(void)
 {
@@ -26,19 +27,16 @@ input:
 	goto input;
 
 finish:
-	if(showleaf==false)
-	{
-		printf("\n\nshowing the leaf nodes!!\n\n");
-		leafnd(root);
-		showleaf=true;
-	}
+	printf("\n\nshowing the leaf nodes!!\n\n");
+	leafnd(root);
 	while(1)
 	{
 		printf("\n\n--menu--\n\n");
 		printf("1. Preorder traversal.\n");
 		printf("2. Inorder traversal.\n");
 		printf("3. Postorder traversal.\n");
-		printf("4. Exit.\n");
+		printf("4. Count the number of nodes in the tree.\n");
+		printf("5. Exit.\n");
 
 		printf("<option> ");
 		scanf("%d", &opt);
@@ -47,16 +45,21 @@ finish:
 		{
 			case 1:
 				preorder(root);
-				goto finish;
+				break;
 
 			case 2:
 				inorder(root);
-				goto finish;
+				break;
 
 			case 3:
 				postorder(root);
-				goto finish;
+				break;
+
 			case 4:
+				printf("\nthe tree has %d nodes!!\n\n", countNd(root, 0));
+				break;
+
+			case 5:
 				if(root!=NULL)
 					terminate(root);
 				exit(0);

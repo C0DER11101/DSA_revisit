@@ -57,10 +57,11 @@ void createPM(int numV)
 					{
 						for(int k=0; k<=a; k++) // intermediate vertices!!
 						{
-							/* if there is no direct path from vertex i to vertex j
-							 * then, there exists an intermediate vertex for which
-							 * there exists a path from vertex i to vertex k and from vertex k to 
-							 * vertex j
+							/* there exist a path from vertex i to vertex j(if there is no direct path from
+							 * vertex i to vertex )
+							 * iff
+							 * there exists a path from vertex i to an intermediate vertes k
+							 * and from the vertex k to vertex j
 							 */
 
 							if(mats[a-1][i][k]==1 && mats[a-1][k][j]==1)

@@ -1,7 +1,7 @@
 #ifndef W_H
 #define W_H
 
-int pathMat[MAX][MAX], mats[MAX][MAX][MAX];
+int pathMat[MAX][MAX];
 
 void createPM(int numV)
 {

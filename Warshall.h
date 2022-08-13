@@ -58,7 +58,7 @@ void createPM(int numV)
 						for(int k=0; k<=a; k++) // intermediate vertices!!
 						{
 							/* there exist a path from vertex i to vertex j(if there is no direct path from
-							 * vertex i to vertex )
+							 * vertex i to vertex j)
 							 * iff
 							 * there exists a path from vertex i to an intermediate vertes k
 							 * and from the vertex k to vertex j

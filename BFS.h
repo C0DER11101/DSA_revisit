@@ -65,20 +65,20 @@ void bfs(int val, int numV)
 
 	nq(val);
 
-	state[val]=1; // waiting state!!
+	state[val]=waiting; // waiting state!!
 
 	while(Front()!=-1)
 	{
 		element=dq();
 		printf("%d ", element);
-		state[element]=2; // visited state!!
+		state[element]=visited; // visited state!!
 
 		for(int i=0; i<numV; i++)
 		{
 			if((adj[element][i]==1 && state[i]!=2) && (adj[element][i]==1 && state[i]!=1))
 			{
 				nq(i);
-				state[i]=1;
+				state[i]=waiting;
 			}
 		}
 	}

@@ -71,7 +71,7 @@ void bfs(int val, int numV)
 	{
 		element=dq();
 		printf("%d ", element);
-		state[element]=2;
+		state[element]=2; // visited state!!
 
 		for(int i=0; i<numV; i++)
 		{

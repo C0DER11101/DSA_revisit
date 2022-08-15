@@ -5,7 +5,7 @@
 #include "BFS.h"
 
 
-// BFS!!
+// BFS!! FOR DIRECTED GRAPH!!!
 
 
 int main(void)

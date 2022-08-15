@@ -6,6 +6,5 @@
 #define INVALID -1
 #define and &&
 #define or ||
-#define not !
 // more symbolic constants awaiting to be defined!!
 #endif

@@ -82,6 +82,9 @@ void bfs(int val, int numV)
 			}
 		}
 	}
+
+	for(int i=0; i<numV;i++) // restoring the state of each vertex!!
+		state[i]=initial;
 }
 
 

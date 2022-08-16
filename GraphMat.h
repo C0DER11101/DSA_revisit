@@ -1,5 +1,6 @@
 #ifndef GRAPH_MAT
 #define GRAPH_MAT
+
 // HEADER FILE FOR ADJACENCY MATRIX!!!
 
 int adj[MAX][MAX];

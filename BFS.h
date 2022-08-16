@@ -75,7 +75,7 @@ void bfs(int val, int numV)
 
 		for(int i=0; i<numV; i++)
 		{
-			if((adj[element][i]==1 && state[i]!=2) && (adj[element][i]==1 && state[i]!=1))
+			if((adj[element][i]==1 && state[i]!=waiting) && (adj[element][i]==1 && state[i]!=visited))
 			{
 				nq(i);
 				state[i]=waiting;

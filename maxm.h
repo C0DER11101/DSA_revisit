@@ -8,6 +8,7 @@
 #define or ||
 #define OK 1
 #define ERR -1
+#define TYPE 0 // TYPE represents the graph type - directed or undirected( 0 is for undirected  )
 
 /* for graphs!!! */
 /* BFS */
@@ -20,6 +21,7 @@ int state[MAX]; // the status of each vertex in bfs, whether it is in initial st
 int pred[MAX]; // predecessor of a vertex -> BFS for finding the shortest path
 int dist[MAX]; // distance value of a vertex -> BFS for finding the shortest path
 int SPath[MAX]; // stores the shortest path from starting vertex to end vertex
-int Spidx;//=-1;
+int Spidx;
+int edgeCount; // for eounting edges
 
 #endif

@@ -8,7 +8,15 @@
 #define or ||
 #define OK 1
 #define ERR -1
-#define TYPE 0 // TYPE represents the graph type - directed or undirected( 0 is for undirected  )
+#define STOP 0
+#define TYPE 1 // TYPE represents the graph type - directed or undirected( 0 is for undirected  )
+/* for stack */
+#define elType 0 // elType represents the the type of element(whether it's a char or int or float); by default it's of type int(i.e 0)
+/* 0 -> int
+ * 1 -> char
+ * 2 -> float
+ * 3 -> double
+ */
 
 /* for graphs!!! */
 /* BFS */
@@ -17,7 +25,7 @@
 #define waiting 1 // waiting state of vertex
 #define visited 2 // visited state of vertex
 // more symbolic constants awaiting to be defined
-int state[MAX]; // the status of each vertex in bfs, whether it is in initial state or waiting state or visited state
+int state[MAX]={initial}; // the status of each vertex in bfs, whether it is in initial state or waiting state or visited state
 int pred[MAX]; // predecessor of a vertex -> BFS for finding the shortest path
 int dist[MAX]; // distance value of a vertex -> BFS for finding the shortest path
 int SPath[MAX]; // stores the shortest path from starting vertex to end vertex

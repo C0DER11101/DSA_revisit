@@ -9,46 +9,34 @@ int adj[MAX][MAX];
 int edge(int intV, int dstV)
 {
 	if(intV<0 && dstV<0)
-	{
-		printf("\n\nSTOPPED!!\n\n");
-		return ERR;
-	}
+		return STOP;
 
 	else if(intV<0 || dstV<0)
-	{
-		printf("\n\ninvalid vertex!!\n\n");
 		return ERR;
-	}
 
 	else
-	{
 		adj[intV][dstV]=1;
-		return OK;
-	}
 
+	return OK;
 }
 
 #else
 
-void edge(int iV, int tV)
+int edge(int iV, int tV)
 {
 	if(iV<0 && tV<0)
-	{
-		printf("\n\nSTOPPED!!!\n\n");
-		return;
-	}
+		return STOP;
 
 	else if(iV<0 || tV<0)
-	{
-		printf("invalid vertices!!\n\n");
-		return;
-	}
+		return ERR;
 
 	else
 	{
 		adj[iV][tV]=1;
 		adj[tV][iV]=1;
 	}
+
+	return OK;
 }
 #endif
 

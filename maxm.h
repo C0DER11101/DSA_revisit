@@ -26,10 +26,10 @@
 #define visited 2 // visited state of vertex
 // more symbolic constants awaiting to be defined
 int state[MAX]={initial}; // the status of each vertex in bfs, whether it is in initial state or waiting state or visited state
-int pred[MAX]; // predecessor of a vertex -> BFS for finding the shortest path
+int pred[MAX]; // predecessor of a vertex -> BFS for finding the shortest path, also for DFS
 int dist[MAX]; // distance value of a vertex -> BFS for finding the shortest path
 int SPath[MAX]; // stores the shortest path from starting vertex to end vertex
-int Spidx;
-int edgeCount; // for eounting edges
+int Spidx; // keeps track of number of vertices in SPath that form the shortest path
+int edgeCount; // for eounting number of edges!!
 
 #endif

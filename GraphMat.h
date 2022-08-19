@@ -6,16 +6,13 @@
 int adj[MAX][MAX];
 
 #if TYPE==1 // 1 is for directed graph (TYPE is defined in "maxm.h")
-int edge(int intV, int dstV)
+int edge(int iV, int tV)
 {
-	if(intV<0 && dstV<0)
-		return STOP;
-
-	else if(intV<0 || dstV<0)
+	if(iV<0 || tV<0)
 		return ERR;
 
 	else
-		adj[intV][dstV]=1;
+		adj[iV][tV]=1;
 
 	return OK;
 }
@@ -24,10 +21,7 @@ int edge(int intV, int dstV)
 
 int edge(int iV, int tV)
 {
-	if(iV<0 && tV<0)
-		return STOP;
-
-	else if(iV<0 || tV<0)
+	if(iV<0 || tV<0)
 		return ERR;
 
 	else

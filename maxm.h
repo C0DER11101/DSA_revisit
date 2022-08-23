@@ -9,7 +9,7 @@
 #define OK 1
 #define ERR -1
 #define STOP 0
-#define TYPE 1 // TYPE represents the graph type - directed or undirected( 0 is for undirected  )
+#define TYPE 0 // TYPE represents the graph type - directed or undirected( 0 is for undirected  )
 /* for stack */
 #define elType 0 // elType represents the the type of element(whether it's a char or int or float); by default it's of type int(i.e 0)
 /* 0 -> int

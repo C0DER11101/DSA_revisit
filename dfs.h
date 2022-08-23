@@ -14,8 +14,10 @@ void dfs(int startV, int numV)
 		{
 			startV=pop();
 			if(state[startV]==initial)
+			{
 				printf("%d ", startV);
-			state[startV]=visited;
+				state[startV]=visited;
+			}
 
 			for(int i=numV-1; i>=0; i--)
 			{
@@ -122,22 +124,67 @@ void crossEdge(int numV)
 
 void dfs(int startV, int numV)
 {
-	push(startV);
-
-	while(Top()!=-1)
+	while(state[startV]!=visited)
 	{
-		startV=pop();
-		if(state[startV]==initial)
-			printf("%d ", startV);
-		state[startV]=visited;
+		push(startV);
+		pred[startV]=-1;
 
-		for(int i=numV-1; i>=0; i--)
+		while(Top()!=-1)
 		{
-			if(adj[startV][i]==1 && state[i]==initial)
-				push(i);
+			startV=pop();
+			if(state[startV]==initial)
+			{
+				printf("%d ", startV);
+				state[startV]=visited;
+			}
+
+			for(int i=numV-1; i>=0; i--)
+			{
+				if(adj[startV][i]==1 && state[i]==initial)
+				{
+					pred[i]=startV;
+					push(i);
+				}
+			}
+		}
+
+		for(int i=0; i<numV; i++)
+		{
+			if(state[i]==initial)
+			{
+				startV=i;
+				break;
+			}
+		}
+	}
+
+	// restoring the states of each vertex
+
+	for(int i=0; i<numV; i++)
+		state[i]=initial;
+}
+
+void spanningTreeEdge(int numV)
+{
+	for(int i=0; i<numV; i++)
+	{
+		if(pred[i]!=-1)
+			printf("%d->%d\n", pred[i], i);
+	}
+}
+
+void backEdge(int numV)
+{
+	for(int i=numV-1; i>=0; i--)
+	{
+		for(int j=pred[i]; j!=-1; j=pred[j])
+		{
+			if(adj[i][j]==1 && j!=pred[i])
+				printf("%d->%d\n", i, j);
 		}
 	}
 }
+
 
 #endif // TYPE
 

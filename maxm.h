@@ -36,5 +36,6 @@ int status; // status of edge() in GraphMat.h
 int startTime[MAX]; // FOR DFS(connected components) starting time of a vertex, when the vertex is pushed into the stack, then that becomes its starting time!!
 int finishTime[MAX]; // FOR DFS(connected components) finishing time of a vertex, when the vertex is popped from the stack, then that becomes its finishing time!!
 int revAdj[MAX][MAX]; // reverse adjacency matrix, to check the connectivity of a directed graph!!!
+static int TIME; // time for each vertex(starting time and finishing time)!!
 
 #endif

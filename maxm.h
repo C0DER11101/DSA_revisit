@@ -19,23 +19,50 @@
  */
 
 /* for graphs!!! */
-/* BFS */
 
-#define initial 0 // initial state of vertex
-#define waiting 1 // waiting state of vertex
-#define visited 2 // visited state of vertex
-// more symbolic constants awaiting to be defined
+/* BFS */
+#define initial 0 // initial state of vertex(used in BFS and DFS)
+#define waiting 1 // waiting state of vertex(used in only BFS)
+#define visited 2 // visited state of vertex(used in BFS and DFS)
+/* --- END --- */
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* DIJKSTRA'S ALGORITHM */
+#define INF 9999 // INF -> INFINITY
+#define Temp 0 // Temporary state -> shortest path to the vertex has not yet been found
+#define Perm 1 // Permanent state -> shortest path to the vertex has been found
+#define NIL -1
+#define DJKAL 1 // 1 indicates that we are working on Dijkstra's algorithm(0 indicates that we are not)!!
+
+int weight[MAX][MAX]; // weight of each edge in the directed graph!
+int pathLen[MAX]; // path length of each vertex
+
+#if DJKAL==1
+void initPathLen()
+{
+	for(int i=0; i<MAX; i++)
+	{
+		pathLen[i]=INF;
+	}
+}
+#endif
+
+int STATE[MAX]={Temp}; // state of each vertex in Dijkstra's algorithm(whether the vertex in temporary state or permanent state)
+/* --- END --- */
+
+int adj[MAX][MAX]; // adjacency matrix
 int state[MAX]={initial}; // the states of each vertex in bfs(and dfs), whether it is in initial state or waiting state or visited state
 /* in dfs, the vertex is either in initial state or visited state(it has no waiting state)*/
-int pred[MAX]; // predecessor of a vertex -> BFS for finding the shortest path, also for DFS
+int pred[MAX]={NIL}; // predecessor of a vertex -> BFS for finding the shortest path, also for DFS and in Shotest path problems
 int dist[MAX]; // distance value of a vertex -> BFS for finding the shortest path
 int SPath[MAX]; // stores the shortest path from starting vertex to end vertex
 int Spidx; // keeps track of number of vertices in SPath that form the shortest path
 int edgeCount; // for eounting number of edges!!
 int status; // status of edge() in GraphMat.h
-int startTime[MAX]; // FOR DFS(connected components) starting time of a vertex, when the vertex is pushed into the stack, then that becomes its starting time!!
-int finishTime[MAX]; // FOR DFS(connected components) finishing time of a vertex, when the vertex is popped from the stack, then that becomes its finishing time!!
-int revAdj[MAX][MAX]; // reverse adjacency matrix, to check the connectivity of a directed graph!!!
+int startTime[MAX]; // FOR DFS(connected components) starting time of a vertex, this is used when DFS is implemented recursively!!
+int finishTime[MAX]; // FOR DFS(connected components) finishing time of a vertex, this is used when DFS is implemented recursively!!
+int revAdj[MAX][MAX]; // reverse adjacency matrix, to check the connectivity of a directed graph(using DFS)
 static int TIME; // time for each vertex(starting time and finishing time)!!
 
 #endif

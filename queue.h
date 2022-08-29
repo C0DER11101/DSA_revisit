@@ -15,7 +15,7 @@ void nq(int val)
 		return;
 	}
 
-	else if(front==-1 && front==-1)
+	else if(front==-1 && rear==-1)
 	{
 		front++, rear++;
 		queue[front]=val;

@@ -17,10 +17,11 @@
  * 2 -> float
  * 3 -> double
  */
+/* --- end --- */
 
 /* for graphs!!! */
 
-/* BFS */
+/* BFS AND DFS */
 #define initial 0 // initial state of vertex(used in BFS and DFS)
 #define waiting 1 // waiting state of vertex(used in only BFS)
 #define visited 2 // visited state of vertex(used in BFS and DFS)
@@ -33,12 +34,11 @@
 #define Temp 0 // Temporary state -> shortest path to the vertex has not yet been found
 #define Perm 1 // Permanent state -> shortest path to the vertex has been found
 #define NIL -1
-#define DJKAL 1 // 1 indicates that we are working on Dijkstra's algorithm(0 indicates that we are not)!!
+#define DJKAL 0 // 1 indicates that we are working on Dijkstra's algorithm(0 indicates that we are not)!!
 
 int weight[MAX][MAX]; // weight of each edge in the directed graph!
 int pathLen[MAX]; // path length of each vertex
 
-#if DJKAL==1
 void initPathLen()
 {
 	for(int i=0; i<MAX; i++)
@@ -46,9 +46,15 @@ void initPathLen()
 		pathLen[i]=INF;
 	}
 }
-#endif
 
 int STATE[MAX]={Temp}; // state of each vertex in Dijkstra's algorithm(whether the vertex in temporary state or permanent state)
+/* --- END --- */
+
+/* --- BELLMAN FORD ALGORITHM --- */
+#define absent 0 // the vertex is absent from the queue
+#define present 1 // the vertex is present in the queue
+int signal[MAX]={absent}; // indicates the signal of each vertex(if it's present in the queue, then its signal will be present otherwise absent)
+int vertexInsertnFreq[MAX]; // number of times a vertex was inserted into the queue, if it exceeds numV, then there is a negative cycle in the graph!
 /* --- END --- */
 
 int adj[MAX][MAX]; // adjacency matrix
@@ -64,5 +70,7 @@ int startTime[MAX]; // FOR DFS(connected components) starting time of a vertex, 
 int finishTime[MAX]; // FOR DFS(connected components) finishing time of a vertex, this is used when DFS is implemented recursively!!
 int revAdj[MAX][MAX]; // reverse adjacency matrix, to check the connectivity of a directed graph(using DFS)
 static int TIME; // time for each vertex(starting time and finishing time)!!
+
+/* --- end --- */
 
 #endif

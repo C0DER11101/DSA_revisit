@@ -1,11 +1,12 @@
 #ifndef RH_H
 #define RH_H
-#define visited 1
-#define unvisited 0
-#define done 1
-#define MAX 100
 
+#if dtype==1
 int inorder[MAX], preorder[MAX], postorder[MAX];
+
+#else
+char inorder[MAX], preorder[MAX], postorder[MAX];
+#endif
 
 int RetIdx(int node)
 {

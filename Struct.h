@@ -1,6 +1,7 @@
 #ifndef Struct_H
 #define Struct_H
 
+#if dtype==1
 struct tree
 {
 	int data;
@@ -9,6 +10,18 @@ struct tree
 };
 
 typedef struct tree tree;
+
+#else
+struct tree
+{
+	char data;
+	struct tree*left;
+	struct tree*right;
+};
+
+typedef struct tree tree;
+
+#endif
 
 tree*insert(tree*root, int idx)
 {
@@ -36,7 +49,11 @@ void Inorder(tree*root)
 		return;
 
 	Inorder(root->left);
+#if dtype==1 // integer
 	printf("%d ", root->data);
+#else
+	printf("%c ", root->data);
+#endif
 	Inorder(root->right);
 }
 
@@ -45,7 +62,11 @@ void Preorder(tree*root)
 	if(root==NULL)
 		return;
 
+#if dtype==1
 	printf("%d ", root->data);
+#else
+	printf("%c ", root->data);
+#endif
 	Preorder(root->left);
 	Preorder(root->right);
 }
@@ -57,7 +78,12 @@ void Postorder(tree*root)
 
 	Postorder(root->left);
 	Postorder(root->right);
+#if dtype==1
 	printf("%d ", root->data);
+#else
+	printf("%c ", root->data);
+#endif
+
 }
 
 void terminate(tree*root)

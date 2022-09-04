@@ -1,12 +1,6 @@
 #ifndef RH_H
 #define RH_H
 
-#if dtype==1
-int inorder[MAX], preorder[MAX], postorder[MAX];
-
-#else
-char inorder[MAX], preorder[MAX], postorder[MAX];
-#endif
 
 int RetIdx(int node)
 {

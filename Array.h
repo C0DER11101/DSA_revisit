@@ -57,4 +57,9 @@ void InsSort(int n)
 	}
 }
 
+void ShellSort(int n)
+{
+	// code for shell sort!!!
+}
+
 #endif

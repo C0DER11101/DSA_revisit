@@ -30,13 +30,13 @@
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* DIJKSTRA'S ALGORITHM */
-#define INF 9999 // INF -> INFINITY
+#define INF 9999 // INF -> INFINITY( this will be used in Floyd's algorithm as well)
 #define Temp 0 // Temporary state -> shortest path to the vertex has not yet been found
 #define Perm 1 // Permanent state -> shortest path to the vertex has been found
-#define NIL -1
+#define NIL -1 // Will also be used in Floyd's algorithm!!
 #define DJKAL 0 // 1 indicates that we are working on Dijkstra's algorithm(0 indicates that we are not)!!
 
-int weight[MAX][MAX]; // weight of each edge in the directed graph!
+int weight[MAX][MAX]; // weight of each edge in the directed graph(will also be used in Floyd's algorithm)
 int pathLen[MAX]; // path length of each vertex
 
 void initPathLen()
@@ -57,10 +57,29 @@ int signal[MAX]={absent}; // indicates the signal of each vertex(if it's present
 int vertexInsertnFreq[MAX]; // number of times a vertex was inserted into the queue, if it exceeds numV, then there is a negative cycle in the graph!
 /* --- END --- */
 
+/* --- FLOYD'S ALGORITHM --- */
+int D[MAX][MAX][MAX]; // shortest path matrix
+int d[MAX][MAX]; // D -1
+int Pred[MAX][MAX][MAX]; // predecessors !!
+int predV[MAX][MAX]; // for pred -1
+void initPred()
+{
+	for(int l=0; l<MAX; l++)
+	{
+		for(int i=0; i<MAX; i++)
+		{
+			for(int j=0; j<MAX; j++)
+				Pred[l][i][j]=NIL;
+		}
+	}
+}
+
+/* --- END --- */
+
 int adj[MAX][MAX]; // adjacency matrix
 int state[MAX]={initial}; // the states of each vertex in bfs(and dfs), whether it is in initial state or waiting state or visited state
 /* in dfs, the vertex is either in initial state or visited state(it has no waiting state)*/
-int pred[MAX]={NIL}; // predecessor of a vertex -> BFS for finding the shortest path, also for DFS and in Shotest path problems
+int pred[MAX]={NIL}; // predecessor of a vertex -> BFS for finding the shortest path, also for DFS and in Shortest path problems
 int dist[MAX]; // distance value of a vertex -> BFS for finding the shortest path
 int SPath[MAX]; // stores the shortest path from starting vertex to end vertex
 int Spidx; // keeps track of number of vertices in SPath that form the shortest path

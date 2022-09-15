@@ -4,8 +4,18 @@
 #define TRUE 1
 #define FALSE 0
 #define INVALID printf("invalid option!!\n\n")
+#define C 1
+#define CPP 0
+#define LANG CPP
+#if LANG == C
+
 #define and &&
 #define or ||
+
+#else
+using namespace std;
+#endif
+
 #define OK 1
 #define ERR -1
 #define STOP 0

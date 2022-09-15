@@ -10,7 +10,6 @@
 *.java
 *.py
 *.cs
-*.cpp
 *.txt
 *.odt
 *.mp3

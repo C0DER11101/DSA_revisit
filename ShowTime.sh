@@ -5,5 +5,5 @@ while [ 1 ]
 do
 	clear
 	date
-	sleep 60 # sleep for 60 seconds(1 min).
+	sleep 1 # sleep for 1 second.
 done

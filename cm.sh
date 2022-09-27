@@ -4,14 +4,23 @@ if [ -e $1 ]
 then
 	if [ -f $1 ]
 	then
-		if [ $3 == "c" ]
-		then
-			gcc $1 -o $2
-		elif [ $3 == "cpp" ]
-		then
-			g++ $1 -o $2
-		fi
+		while read p
+		do
+			if [ $p=="iostream" ]
+			then
+				echo "G++"
+				g++ $1 -o $2
+				break
 
+			elif [ $p=="stdio.h" ]
+			then
+				echo "GCC"
+				gcc $1 -o $2
+				break
+
+			fi
+
+		done < $1
 	else
 		echo "$1 is not a file!!"
 

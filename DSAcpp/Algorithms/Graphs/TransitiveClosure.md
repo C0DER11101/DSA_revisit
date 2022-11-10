@@ -21,7 +21,7 @@ P[i][j]=1, if there is a path from vertex i to vertex j, otherwise 0.
 
 # Computing path matrix from powers of adjacency matrix
 
-If a graph G has $n$ vertices, then the path matrix is calculated as:
+If a graph G has $n$ vertices, then the path matrix P is calculated as:
 
 $$P=A^1 + A^2 + A^3 + ....+ A^n$$
 

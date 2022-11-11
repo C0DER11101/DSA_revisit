@@ -1,11 +1,45 @@
 # What is hashing?
 
-> The process of converting a key to an address(index of an array) is called hashing or key to address transformation.
+> The process of converting a key to an address(index of an array) is called hashing or key to address transformation and array in which insertion and searching is done through hashing is called _hash table_.
 
 In hashing, we take a key as input and return the hash value of that key which is used as the address for storing the key in the array.
 
 Keys may be of any type(`int`, `float`, etc), but the hash value will always be an integer.
 
 $$Key \rightarrow HashFunction \rightarrow Address$$
+
+**Collision occurs when the hash function generates the same address for different keys.**
+
+_The keys which are mapped to the same address are called **synonyms**._
+
+## Hash functions
+
+> A hash function works like a mapping interface between the key and the hash table. 
+
+**If the size of the hash table is _m_ then we need a hash function that can generate addresses in the range _0_ to _m-1_.**
+
+## Methods for computing addresses from a key.
+
+### 1. Truncation(or Extraction)
+ > Here we take only a part of the key as address.
+ > This method is easy, but chances of collision are more.
+
+### 2. Midsquare method
+> The key is squared and some digits or bits from the middle of this square are taken as address.
+> Selection of digits depends on size of the table.
+> Same number of digits should be selected from the squares of all the keys.
+
+### 3. Folding method
+> Key is broken into different parts where length each part is the same as the that of the required address(except possibly the last part).
+> The address of the key can be obtained by ignoring the final carry in the sum.
+
+### 4. Division method
+> Key is divided by table size and the remainder is taken as the address for hash table.
+
+If _m_ is the size of the hash table, then we will get the addresses in the range {0....m-1}.
+
+If **H()** is a hash function for this method, **k** is a key and **m** is the size of the table, then **H()** is defined as:
+
+$$H(k)=k%m$$
 
 ---

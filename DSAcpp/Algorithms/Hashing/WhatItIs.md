@@ -12,7 +12,7 @@ $$Key \rightarrow HashFunction \rightarrow Address$$
 
 _The keys which are mapped to the same address are called **synonyms**._
 
-## Hash functions
+# Hash functions
 
 > A hash function works like a mapping interface between the key and the hash table. 
 
@@ -41,5 +41,14 @@ If _m_ is the size of the hash table, then we will get the addresses in the rang
 If **H()** is a hash function for this method, **k** is a key and **m** is the size of the table, then **H()** is defined as:
 
 $$H(k)=k\mod m$$
+
+# Collision resolution
+
+_There are two collision resolution techniques:_
+1. Open addressing(Closed hashing).
+2. Separate chaining(Open Hashing).
+
+## 1. Open addressing(Closed hashing)
+
 
 ---

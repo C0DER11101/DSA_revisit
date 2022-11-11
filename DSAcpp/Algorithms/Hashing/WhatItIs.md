@@ -40,6 +40,6 @@ If _m_ is the size of the hash table, then we will get the addresses in the rang
 
 If **H()** is a hash function for this method, **k** is a key and **m** is the size of the table, then **H()** is defined as:
 
-$$H(k)=k%m$$
+$$H(k)=k \mod m$$
 
 ---

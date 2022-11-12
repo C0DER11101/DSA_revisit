@@ -27,8 +27,8 @@ The efficiency of a collision resolution technique is defined in terms of the nu
 ## Methods for computing addresses from a key.
 
 ### 1. Truncation(or Extraction)
- > Here we take only a part of the key as address.
- > This method is easy, but chances of collision are more.
+> Here we take only a part of the key as address.
+> This method is easy, but chances of collision are more.
 
 ### 2. Midsquare method
 > The key is squared and some digits or bits from the middle of this square are taken as address.

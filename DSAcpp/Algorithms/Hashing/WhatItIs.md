@@ -138,7 +138,7 @@ where $PRIME$ is a prime number smaller than the table size $Tsize$.
 
 
 **LOAD FACTOR OF A HASH TABLE**
-- Denoted by $\lambda$, Where $$\lambda = \frac{n}{m}$$
+- Denoted by $\lambda$, where $$\lambda = \frac{n}{m}$$
 
 where **n** is _number of records_ and **m** is _number of positions in the hash table_.
 

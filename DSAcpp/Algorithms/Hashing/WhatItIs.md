@@ -87,6 +87,22 @@ $$h(k) = k\mod Tsize$$
 
 > Quadratic probing gives secondary clustering problem.
 
+**In secondary clustering, the keys that have the same hash address will probe the same sequence of locations.**
 
+Example:
+
+Consider the keys 46, 35 and 57.
+
+Let's say the size of the hash table is 11, then `i` will go from _0_ to _10_.
+
+$$H(46) = (h(46) + 0)\mod 11 = 2$$ [h(46) = $46\mod 11 = 2$ ]
+$$H(46) = (h(46) + 1^2)\mod 11 = 3$$
+$$H(46) = (h(46) + 2^2)\mod 11 = 6$$
+$$H(46) = (h(46) + 3^2)\mod 11 = 0$$
+$$ .... and so on$$
+
+Similarly, for 35, we will get the same sequence of numbers and so for 57.
+
+Because $47\mod 11 = 2$, $35\mod 11 = 2$ and $57\mod 11 = 2$, so the hash address for 47, 35 and 57 is 2; so the sequence of locations formed will also be same. This is **Secondary clustering**.
 
 ---

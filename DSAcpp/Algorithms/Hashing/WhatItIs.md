@@ -12,6 +12,12 @@ $$Key \rightarrow HashFunction \rightarrow Address$$
 
 _The keys which are mapped to the same address are called **synonyms**._
 
+` When a given key is compared with many keys, then each comparison is known as a probe.`
+
+```
+The efficiency of a collision resolution technique is defined in terms of the number of probes required to find a record with a given key.
+```
+
 # Hash functions
 
 > A hash function works like a mapping interface between the key and the hash table. 
@@ -49,6 +55,19 @@ _There are two collision resolution techniques:_
 2. Separate chaining(Open Hashing).
 
 ## 1. Open addressing(Closed hashing)
+> The key which caused the collision is placed inside the has table itself but at a location other than its has address.
 
+**There are 3 methods to search for an empty location:**
+
+1. Linear probing.
+2. Quadratic probing.
+3. Double hashing.
+
+### 1. Linear probing
+**FORMULA:**
+$$H(k, i) = (h(k) + i) \mod Tsize$$
+
+`Tsize` is the size of the hash table; `i` varies from `0` to `Tsize-1`;
+Here `h(k)` is: $$k \mod Tsize$$
 
 ---

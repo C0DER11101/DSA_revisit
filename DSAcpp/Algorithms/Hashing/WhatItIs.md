@@ -85,4 +85,8 @@ $$H(k, i) = (h(k) + i^2) \mod Tsize$$
 Where
 $$h(k) = k\mod Tsize$$
 
+> Quadratic probing gives secondary clustering problem.
+
+
+
 ---

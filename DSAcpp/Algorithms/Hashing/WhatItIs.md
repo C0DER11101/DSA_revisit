@@ -132,4 +132,11 @@ So, $h'(k)$ is defined as:
 $$h'(k) = PRIME - k\mod PRIME$$
 where $PRIME$ is a prime number smaller than the table size $Tsize$.
 
+**A good increment factor:**
+1. Should never give the value 0.
+2. Should produce addresses of locations that are emtpy.
+
+
+**LOAD FACTOR OF A HASH TABLE**
+- Denoted by $\lambda$
 ---

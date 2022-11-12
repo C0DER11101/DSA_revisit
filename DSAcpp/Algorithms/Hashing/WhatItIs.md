@@ -106,6 +106,6 @@ and the sequence goes on till `i=10`.
 
 Similarly, for 35, we will get the same sequence of numbers and so for 57.
 
-Because $$47\mod 11 = 2$$, $$35\mod 11 = 2$$ and $$57\mod 11 = 2$$, so the hash address for 47, 35 and 57 is 2; so the sequence of locations formed will also be same. This is **Secondary clustering**.
+Because $$47\mod 11 = 2$$ $$35\mod 11 = 2$$ and $$57\mod 11 = 2$$ so the hash address for 47, 35 and 57 is 2; so the sequence of locations formed will also be same. This is **Secondary clustering**.
 
 ---

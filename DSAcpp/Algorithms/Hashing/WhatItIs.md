@@ -142,4 +142,32 @@ where $PRIME$ is a prime number smaller than the table size $Tsize$.
 
 where **n** is _number of records_ and **m** is _number of positions in the hash table_.
 
+# Separate chaining
+
+> In this method linked lists are maintained for elements that have same has address.
+
+> The hash table is just an array of pointers.
+
+> Each element of linked list will contain the whole record with key. These linked lists are referred to as chains, and hence the method is named separate chaining.
+
+> This method is best suited for applications where the number of records is not known in advance.
+
+**FORMULA:** $$H(k) = k\mod Tsize$$
+
+**DISADVANTAGE**
+- Requires extra space for pointers.
+
+If there are **n** records and table size is **m**, then we need extra **n+m** pointers.
+
+# Bucket hashing
+
+> This technique postpones collisions, it doesn't resolve them completely.
+
+> The hash table is made up of buckets, each bucket can hold multiple records.
+
+> Collisions will occur only after a bucket is full.
+> 
+**FORMULA:** $$H(k) = k\mod Tsize$$
+
+
 ---

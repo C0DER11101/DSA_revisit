@@ -99,7 +99,10 @@ $$H(46) = (h(46) + 0^2)\mod 11 = 2$$
 $$H(46) = (h(46) + 1^2)\mod 11 = 3$$
 $$H(46) = (h(46) + 2^2)\mod 11 = 6$$
 $$H(46) = (h(46) + 3^2)\mod 11 = 0$$
-$$ .... and so on$$
+$$.$$
+$$.$$
+$$.$$
+and the sequence goes on till `i=10`.
 
 Similarly, for 35, we will get the same sequence of numbers and so for 57.
 

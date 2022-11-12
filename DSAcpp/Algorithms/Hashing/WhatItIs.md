@@ -115,6 +115,7 @@ Because $$47\mod 11 = 2$$ $$35\mod 11 = 2$$ and $$57\mod 11 = 2$$ so the hash ad
 ### 3. Double hashing
 > Double hashing uses an **increment factor** in its formula.
 > This **increment factor** depends on the key.
+> The **increment factor** is another hash function(hence, it's called double hashing).
 
 **FORMULA:**
 $$H(k, i) = (h(k) + i*h'(k)) \mod Tsize$$

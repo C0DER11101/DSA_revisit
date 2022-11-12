@@ -110,7 +110,7 @@ Because $$47\mod 11 = 2$$ $$35\mod 11 = 2$$ and $$57\mod 11 = 2$$ so the hash ad
 
 **In secondary clustering, clusters are formed by records that follow the same collision path.**
 
-**_Quadratic probing can't access all the positions of the hash table. An insert operation may fail inspite of empty locations inside the hash table. So to solve this problem, the size of the hash table should preferably be a prime number. Then atleast half of the locations of the hash table will be accessed.
+**_Quadratic probing can't access all the positions of the hash table. An insert operation may fail inspite of empty locations inside the hash table. So to solve this problem, the size of the hash table should preferably be a prime number. Then atleast half of the locations of the hash table will be accessed._**
 
 ### 3. Double hashing
 > Double hashing uses an **increment factor** in its formula.

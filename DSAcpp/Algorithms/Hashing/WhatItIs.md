@@ -64,10 +64,19 @@ _There are two collision resolution techniques:_
 3. Double hashing.
 
 ### 1. Linear probing
+> Collision keys are stored near the initial collision point.
+
+
 **FORMULA:**
-$$H(k, i) = (h(k) + i) \mod Tsize$$
+$$H(k, i) = ([h(k)](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Hashing/WhatItIs.md#4-division-method) + i) \mod Tsize$$
 
 `Tsize` is the size of the hash table; `i` varies from `0` to `Tsize-1`;
-Here `h(k)` is: $$k \mod Tsize$$
+
+### 2. Quadratic probing
+> Collision keys are stored away from the initial collision point.
+
+
+**FORMULA:**
+$$H(k, i) = ([h(k)](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Hashing/WhatItIs.md#4-division-method) + i^2) \mod Tsize$$
 
 ---

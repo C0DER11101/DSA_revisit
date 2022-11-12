@@ -95,10 +95,10 @@ Consider the keys 46, 35 and 57.
 
 Let's say the size of the hash table is 11, then `i` will go from _0_ to _10_.
 $h(46)=46\mod 11$
-$$H(46) = (h(46) + 0^2)\mod 11 = 2$$
-$$H(46) = (h(46) + 1^2)\mod 11 = 3$$
-$$H(46) = (h(46) + 2^2)\mod 11 = 6$$
-$$H(46) = (h(46) + 3^2)\mod 11 = 0$$
+$$H(46, 0) = (h(46) + 0^2)\mod 11 = 2$$
+$$H(46, 1) = (h(46) + 1^2)\mod 11 = 3$$
+$$H(46, 2) = (h(46) + 2^2)\mod 11 = 6$$
+$$H(46, 3) = (h(46) + 3^2)\mod 11 = 0$$
 $$.$$
 $$.$$
 $$.$$
@@ -107,5 +107,16 @@ and the sequence goes on till `i=10`.
 Similarly, for 35, we will get the same sequence of numbers and so for 57.
 
 Because $$47\mod 11 = 2$$ $$35\mod 11 = 2$$ and $$57\mod 11 = 2$$ so the hash address for 47, 35 and 57 is 2; so the sequence of locations formed will also be same. This is **Secondary clustering**.
+
+**In secondary clustering, clusters are formed by records that follow the same collision path.**
+
+**_Quadratic probing can't access all the positions of the hash table. An insert operation may fail inspite of empty locations inside the hash table. So to solve this problem, the size of the hash table should preferably be a prime number. Then atleast half of the locations of the hash table will be accessed.
+
+### 3. Double hashing
+> Double hashing uses an **increment factor** in its formula.
+> This **increment factor** depends on the key.
+
+**FORMULA:**
+$$H(k, i) = (h(k) + i*h'(k)) \mod Tsize$$
 
 ---

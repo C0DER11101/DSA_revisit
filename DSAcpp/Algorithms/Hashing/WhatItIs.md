@@ -72,6 +72,7 @@ $$H(k, i) = (h(k) + i) \mod Tsize$$
 
 `Tsize` is the size of the hash table; `i` varies from `0` to `Tsize-1`;
 
+Where
 $$h(k) = k\mod Tsize$$
 
 ### 2. Quadratic probing
@@ -81,6 +82,7 @@ $$h(k) = k\mod Tsize$$
 **FORMULA:**
 $$H(k, i) = (h(k) + i^2) \mod Tsize$$
 
+Where
 $$h(k) = k\mod Tsize$$
 
 ---

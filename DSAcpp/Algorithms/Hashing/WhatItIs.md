@@ -72,7 +72,7 @@ $$H(k, i) = (h(k) + i) \mod Tsize$$
 
 `Tsize` is the size of the hash table; `i` varies from `0` to `Tsize-1`;
 
-[h(k)](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Hashing/WhatItIs.md#4-division-method) is $k\mod Tsize$
+$$h(k) = k\mod Tsize$$
 
 ### 2. Quadratic probing
 > Collision keys are stored away from the initial collision point.
@@ -81,6 +81,6 @@ $$H(k, i) = (h(k) + i) \mod Tsize$$
 **FORMULA:**
 $$H(k, i) = (h(k) + i^2) \mod Tsize$$
 
-[h(k)](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Hashing/WhatItIs.md#4-division-method) is $k\mod Tsize$
+$$h(k) = k\mod Tsize$$
 
 ---

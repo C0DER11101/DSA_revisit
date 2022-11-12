@@ -142,7 +142,7 @@ where $PRIME$ is a prime number smaller than the table size $Tsize$.
 
 where **n** is _number of records_ and **m** is _number of positions in the hash table_.
 
-# Separate chaining
+## 2. Separate chaining
 
 > In this method linked lists are maintained for elements that have same has address.
 

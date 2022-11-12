@@ -124,4 +124,12 @@ $$H(k, i) = (h(k) + i*h'(k)) \mod Tsize$$
 
 where `h'(k)` is the secondary has function, called **increment factor**.
 
+We already know how $h(k)$ is defined.
+
+Now we will move to the definition of $h'(k)$.
+
+So, $h'(k)$ is defined as:
+$$h'(k) = PRIME - k\mod PRIME$$
+where $PRIME$ is a prime number smaller than the table size $Tsize$.
+
 ---

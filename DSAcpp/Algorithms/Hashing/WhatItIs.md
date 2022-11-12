@@ -122,4 +122,6 @@ Because $$47\mod 11 = 2$$ $$35\mod 11 = 2$$ and $$57\mod 11 = 2$$ so the hash ad
 **FORMULA:**
 $$H(k, i) = (h(k) + i*h'(k)) \mod Tsize$$
 
+where `h'(k)` is the secondary has function, called **increment factor**.
+
 ---

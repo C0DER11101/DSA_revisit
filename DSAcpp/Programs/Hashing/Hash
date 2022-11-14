@@ -33,7 +33,7 @@ class Hash
 
 
 	void insert();
-	int Probe(T, int);
+	int LProbe(T, int);
 	int h(T);
 	void showTable();
 };
@@ -62,7 +62,7 @@ void Hash<T>::insert()
 	{
 		for(int i=0; i<_Tsize; i++)
 		{
-			k=Probe(arr[idx], i);
+			k=LProbe(arr[idx], i);
 			if(_table[k]==-1)
 			{
 				_table[k]=arr[idx];
@@ -82,7 +82,7 @@ void Hash<T>::insert()
 }
 
 template<class T>
-int Hash<T>::Probe(T key, int i)
+int Hash<T>::LProbe(T key, int i)
 {
 	return ((h(key)+i)%_Tsize);
 }

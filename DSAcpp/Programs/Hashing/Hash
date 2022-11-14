@@ -32,14 +32,15 @@ class Hash
 	}
 
 
-	void insert();
+	void insert(int);
 	int LProbe(T, int);
+	int QProbe(T, int);
 	int h(T);
 	void showTable();
 };
 
 template<class T>
-void Hash<T>::insert()
+void Hash<T>::insert(int probeOpt)
 {
 	int num;
 	cout<<"enter number of elements to be inserted: ";
@@ -58,20 +59,44 @@ void Hash<T>::insert()
 
 	int k;
 
-	for(int idx=0; idx<num; idx++)
+	if(probeOpt==0) // perform linear probing
 	{
-		for(int i=0; i<_Tsize; i++)
+		for(int idx=0; idx<num; idx++)
 		{
-			k=LProbe(arr[idx], i);
-			if(_table[k]==-1)
+			for(int i=0; i<_Tsize; i++)
 			{
-				_table[k]=arr[idx];
-				break;
-			}
+				k=LProbe(arr[idx], i);
+				if(_table[k]==-1)
+				{
+					_table[k]=arr[idx];
+					break;
+				}
 
-			else
+				else
+				{
+					cout<<"\nCollision at index ["<<i<<"]"<<"\n";
+				}
+			}
+		}
+	}
+
+	else if(probeOpt==1) // perform quadratic probing
+	{
+		for(int idx=0; idx<num; idx++)
+		{
+			for(int i=0; i<_Tsize; i++)
 			{
-				cout<<"\nCollision at index ["<<i<<"]"<<"\n";
+				k=QProbe(arr[idx], i);
+				if(_table[k]==-1)
+				{
+					_table[k]=arr[idx];
+					break;
+				}
+
+				else
+				{
+					cout<<"\nCollision at index ["<<i<<"]"<<"\n";
+				}
 			}
 		}
 	}
@@ -85,6 +110,12 @@ template<class T>
 int Hash<T>::LProbe(T key, int i)
 {
 	return ((h(key)+i)%_Tsize);
+}
+
+template<class T>
+int Hash<T>::QProbe(T key, int i)
+{
+	return((h(key)+i*i)%_Tsize);
 }
 
 template<class T>

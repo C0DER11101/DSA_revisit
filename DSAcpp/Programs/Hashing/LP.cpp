@@ -1,6 +1,6 @@
 #include<iostream>
 #include<stdlib.h>
-#include "LP"
+#include "Hash"
 
 int main(void)
 {

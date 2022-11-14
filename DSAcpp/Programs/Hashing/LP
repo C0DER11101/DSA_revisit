@@ -1,0 +1,104 @@
+#ifndef LP_H
+#define LP_H
+
+using namespace std;
+
+// Linear Probing!!
+
+template<class T>
+class Hash
+{
+	T*_table;
+	int _Tsize;
+
+	public:
+
+	Hash():_table(NULL), _Tsize(0){}
+	Hash(int size):_Tsize(size)
+	{
+		_table=new T[_Tsize];
+
+		for(int i=0; i<_Tsize; i++)
+			_table[i]=-1;
+	}
+
+
+	~Hash()
+	{
+		cout<<"\n.....\n";
+
+		delete _table;
+	}
+
+
+	void insert();
+	int Probe(T, int);
+	int h(T);
+	void showTable();
+};
+
+template<class T>
+void Hash<T>::insert()
+{
+	int num;
+	cout<<"enter number of elements to be inserted: ";
+	cin>>num;
+
+	T*arr=new T[num];
+
+	cout<<"\nenter elements:\n";
+
+	for(int idx=0; idx<num; idx++)
+	{
+		cout<<"enter element: ";
+		cin>>arr[idx];
+
+	}
+
+	int k;
+
+	for(int idx=0; idx<num; idx++)
+	{
+		for(int i=0; i<_Tsize; i++)
+		{
+			k=Probe(arr[idx], i);
+			if(_table[k]==-1)
+			{
+				_table[k]=arr[idx];
+				break;
+			}
+
+			else
+			{
+				cout<<"\nCollision at index ["<<i<<"]"<<"\n";
+			}
+		}
+	}
+
+
+	delete arr;
+
+}
+
+template<class T>
+int Hash<T>::Probe(T key, int i)
+{
+	return ((h(key)+i)%_Tsize);
+}
+
+template<class T>
+int Hash<T>::h(T key)
+{
+	return (key%(_Tsize));
+}
+
+template<class T>
+void Hash<T>::showTable()
+{
+	cout<<"\nHASH TABLE:\n";
+	for(int i=0; i<_Tsize; i++)
+		cout<<"["<<i<<"]: "<<_table[i]<<"\n";
+}
+
+
+#endif

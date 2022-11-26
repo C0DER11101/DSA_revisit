@@ -29,4 +29,8 @@ Where A is the adjacency matrix of the graph G.
 
 # Computing path matrix using Warshall's Algorithm.
 
+## Warshall's Algorithm
+
+Let G be a graph of n vertices 0, 1, 2, 3.....n-1. We will define Boolean matrices $P_-1, P_0, P_1, ....P_n-1$
+
 ---

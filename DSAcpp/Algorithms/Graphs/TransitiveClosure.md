@@ -39,15 +39,15 @@ where $P_k[i][j]$ is defined as:
 - $P_k[i][j]$=0, _otherwise_
 
 
-> $P_{-1}[i][j]$=1, _if there is a simple path from vertex i to vertex j which doesnot use any intermediate vertices_
-> $P_0[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertex 0._
-> $P_1[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1._
-> $P_2[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2._
-> $.
-> $.
-> $.
-> $P_k[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2, ....k._
-> $P_{n-1}[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1,....n-1._
+- $P_{-1}[i][j]$=1, _if there is a simple path from vertex i to vertex j which doesnot use any intermediate vertices_
+- $P_0[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertex 0._
+- $P_1[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1._
+- $P_2[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2._
+- $.
+- $.
+- $.
+- $P_k[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2, ....k._
+- $P_{n-1}[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1,....n-1._
 
 
 **Here, $P_{-1}$ represents the adjacency matrix and $P_{n-1}$ represents the path matrix.**

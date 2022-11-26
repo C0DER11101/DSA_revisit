@@ -43,9 +43,6 @@ where $P_k[i][j]$ is defined as:
 - $P_0[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertex 0._
 - $P_1[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1._
 - $P_2[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2._
-- $.
-- $.
-- $.
 - $P_k[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2, ....k._
 - $P_{n-1}[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1,....n-1._
 

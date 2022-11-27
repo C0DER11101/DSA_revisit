@@ -56,7 +56,7 @@ where $P_k[i][j]$ is defined as:
 **Here, $P_{-1}$ represents the adjacency matrix and $P_{n-1}$ represents the path matrix.**
 
 
-**_If $P_{k-1}[i][j]=1$, then $P_k[i][j]=1$_**
+**If $P_{k-1}[i][j]=1$, then $P_k[i][j]=1$**
 
 Explanation(according to what I understood):
 

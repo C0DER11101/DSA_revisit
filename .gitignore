@@ -5,9 +5,6 @@
 *.html
 *.css
 *.js
-*.png
-*.jpeg
-*.jpg
 *.java
 *.py
 *.cs

@@ -45,13 +45,6 @@ where $P_k[i][j]$ is defined as:
 - $P_2[i][j]=1$, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2._
 - $P_k[i][j]=1$, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2, ....k._
 - $P_{n-1}[i][j]=1$, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1,....n-1._
-- $P_{-1}[i][j]$=1, _if there is a simple path from vertex i to vertex j which doesnot use any intermediate vertices_
-- $P_0[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertex 0._
-- $P_1[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1._
-- $P_2[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2._
-- $P_k[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1, 2, ....k._
-- $P_{n-1}[i][j]$=1, _if there is a simple path from vertex i to vertex j using intermediate vertices 0, 1,....n-1._
-
 
 **Here, $P_{-1}$ represents the adjacency matrix and $P_{n-1}$ represents the path matrix.**
 
@@ -78,6 +71,23 @@ That's why it's said that if $P_{k-1}[i][j]=1$ then $P_k[i][j]=1$
 
 Now, $P_{k-1}[i][j]=0$ means that there is no path from vertex i to vertex j using intermediate vertices 0, 1....k-1.
 
-But we cannot say that $P_k[i][j]=0$. Look at the explanation below :point_down:
+But we cannot say that $P_k[i][j]=0$ just because $P_{k-1}[i][j]=0$. Look at the explanation below :point_down:
+
+Let's say that we have to reach B and we are in place A.
+
+There some roads numbered from 0 to k-1; but none of them leads to B(This is an analogy to $P_{k-1}[i][j]=0$).
+
+But there an extra road, numbered k which leads to B, so now, we can reach B via this road(This analogy shows that $P_k[i][j]$ cannot be 0 just because $P_{k-1}[i][j]=0$, $P_k[i][j]$ may or maynot be 0).
+
+Keeping that example in mind let's assume that the vertex k leads to vertex j from vertex i, and no other vertices from 0, 1...k-1 leads to vertex j, but we can use the vertices 0 to k-1(not necessarily all of them) to reach vertex k and from vertex k to vertex j.
+
+Since vertex k leads to vertex j, that means we will have two paths i.e one path will go from vertex i to vertex k using intermediate vertices 0....k-1 and other path will be from vertex k to vertex j using intermediate vertices 0.....k-1.
+
+
+So in simple words we can write that:
+
+if $P_{k-1}[i][j]=0$, then
+
+$P_k[i][j]=1$ if and only if $P_{k-1}[i][k]=1$ and $P_{k-1}[k][j]=1$ otherwise $P_k[i][j]=0$.
 
 ---

@@ -55,4 +55,29 @@ where $P_k[i][j]$ is defined as:
 
 **Here, $P_{-1}$ represents the adjacency matrix and $P_{n-1}$ represents the path matrix.**
 
+
+**_If $P_{k-1}[i][j]=1$, then $P_k[i][j]=1$_**
+
+Explanation(according to what I understood):
+
+Assume two places A and B. Now, to reach A and B, there are a bunch of roads that lead to B from A. Lets say we have 0 to k-1 roads.
+That means, we cannot use any other paths/roads, except possibly those roads that already exist.
+
+We may use any roads that are a part of those k-1 roads, but it's not necessary that we will have to use all the k-1 roads.
+
+Let's say we reach to place B from A using roads 0, 1 and 3.
+
+> Recall this above example was analogy for $P_{k-1}=1$
+
+Now, let's assume there another road that leads to B from A. So the total number roads that we have now are road 0 to k.
+
+But we will still use the roads 0, 1 and 3 to reach B, we may use other roads that lead to B(like road 2, road 4, .....).
+
+That's why it's said that if $P_{k-1}[i][j]=1$ then $P_k[i][j]=1$
+
+
+Now, $P_{k-1}[i][j]=0$ means that there is no path from vertex i to vertex j using intermediate vertices 0, 1....k-1.
+
+But we cannot say that $P_k[i][j]=0$. Look at the explanation below :point_down:
+
 ---

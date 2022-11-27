@@ -90,4 +90,31 @@ if $P_{k-1}[i][j]=0$, then
 
 $P_k[i][j]=1$ if and only if $P_{k-1}[i][k]=1$ and $P_{k-1}[k][j]=1$ otherwise $P_k[i][j]=0$.
 
+Consider a diagraph:
+
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/Digraph1.png?raw=true)
+
+The adjacency matrix $P_{-1}$ will be:
+
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/AdjacencymatrixForDiagraph1.png?raw=true)
+
+Now, for $P_0$, all those $1s$ of $P_{-1}$ will be included in matrix $P_0$.
+
+$P_0$ means that the intermediate vertex is 0. So, if $P_{-1}[i][j]=0$ then $P_0[i][j]=1$ if and only if $P_0[i][0]=1$ and $P_0[0][j]=1$.
+
+From the image we can see that $P_{-1}[1][1]=0$. So, now we see that $P_{-1}[1][0]=1$ and $P_{-1}[0][1]=1$ so, $P_0[1][1]=1$.
+Continue following the above method for all the vertices of $P_0$ and this is what you will get.
+
+Matrix $P_0$.
+
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/MatrixP0forDiagraph1.png?raw=true)
+
+Similarly, create matrix $P_1$ from matrix $P_0$, matrix $P_2$ from matrix $P_1$ and so on...
+
+Number of vertices is 4 (from vertex 0 to vertex 3), so 4 matrices will be formed i.e $P_{-1}, P_0, P_1, P_2, P_3$.
+
+$P_3$ will be the required path matrix and $P_{-1}$ will be the adjacency matrix of the diagraph.
+
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/PathMatrixForDiagraph1.png?raw=true)
+
 ---

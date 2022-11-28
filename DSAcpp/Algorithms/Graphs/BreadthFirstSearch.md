@@ -14,7 +14,7 @@ Consider the graph below:
 
 ![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/Diagraph2.png?raw=true)
 
-We will implement BFS using a **queue**.
+**BFS is implemented using a queue.**
 
 
 ## Algorithm

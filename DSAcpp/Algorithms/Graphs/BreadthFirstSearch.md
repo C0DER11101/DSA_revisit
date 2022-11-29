@@ -16,6 +16,10 @@ Consider the graph below:
 
 **BFS is implemented using a queue.**
 
+**Remember one thing:**
+
+` The adjacent vertices of a vertex is/are searched only after removing it from the queue. `
+
 
 ## Algorithm
 

@@ -35,4 +35,56 @@ This statement simply means this:
 
 Consider the graph below:
 
-![alt text](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFSDiagraph.png)
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFSDiagraph.png)
+
+
+Now, we will apply the algorithm, to this graph:
+
+### Steps:
+
+Starting vertex: 0
+
+1. Push `0` into stack.
+2. Pop `0` from stack.
+3. Visit `0`, change its state to visited. Check if `0` has any adjacent vertices.
+**Adjacent vertices of `0` found:** `3` and `1`. Push into stack.
+4. Pop `1`.
+5. Visit `1`, change state of `1` to visited.
+**Adjacent vertices of `1` found:** `5`, `4` and `2`. Push into stack.
+6. Pop `2`.
+7. Visit `2`, change state of `2` to visited.
+**Adjacent vertices of `2` found:** `5` and `3`. Push into stack.
+8. Pop `3`.
+9. Visit `3`, change state of `3` to visited.
+**Adjacent vertices of `3` found:** `6`. Push into stack.
+10. Pop `6`.
+11. Visit `6`, change state of `6` to visited.
+**Adjacent vertices of `6` found:** `9`. Push into stack.
+12. Pop `9`.
+13. visit `9`, change state of `9` to visited.
+**No adjacent vertices of `9` found.**
+14. Pop `5`.
+15. Visit `5`, change state of `5` to visited.
+**Adjacent vertices of `5` found:** `8`, `7` and `6`[already visited]. Push `8` and `7`.
+16. Pop `7`.
+17. Visit `7`, change state of `7` to visited.
+**Adjacent vertices of `7` found:** `8`. Push into stack.
+18. Pop `8`.
+19. Visit `8`, change state of `8` to visited.
+**Adjacent vertices of `8` found:** `9`[already visited]. Nothing pushed into stack.
+20. Pop `8` again, but this time `8` is visited. So do nothing. Move on.
+21. Pop `4`.
+22. Visit `4`, change state of `4` to visited.
+**Adjacent vertices of 4 found:** `7`[already visited].
+23. Pop `5` again, but it has visited already. Do nothing. Move on.
+24. Pop `3` again, but it has also been visited already. Do nothing.
+25. STACK EMPTY!! Stop DFS.
+
+
+**So the traversal of the graph is:** _[0 1 2 3 6 9 5 7 8 4]_
+
+The traversal is shown below:
+
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFS.gif?raw=true)
+
+---

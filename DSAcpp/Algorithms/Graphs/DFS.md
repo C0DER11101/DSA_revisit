@@ -86,7 +86,7 @@ Starting vertex: 0
 The traversal is shown below:
 
 
-<img src="https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFS.gif?raw=true"/>
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFS.gif?raw=true)
 
 
 **In DFS, if a vertex is already present in the stack it can re-pushed into the stack if it's still in _initial_ state.**

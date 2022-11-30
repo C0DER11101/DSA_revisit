@@ -85,6 +85,24 @@ Starting vertex: 0
 
 The traversal is shown below:
 
-![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFS.gif?raw=true)
+
+<img src="https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFS.gif?raw=true"/>
+
+
+**In DFS, if a vertex is already present in the stack it can re-pushed into the stack if it's still in _initial_ state.**
+
+_If all vertices are not reachable from the start vertex then we need to repeat the procedure taking some other start vertex._
+
+**DFS can also be implemented recursively.**
+
+
+# Classification of edges in DFS
+
+1. Tree edge: _Edge included in the DFS spanning tree._
+2. Back edge: _Edge from a vertex to its spanning tree ancestor._
+3. Forward edge: _Edge from a vertex to a spanning tree non-son descendant._
+4. Cross edge: _An edge between two vertices `u` and `v` is said to be cross edge if there is no ancestor or descendant relationshipbetween `u` and `v` in the spanning forest. Cross edges can be between vertices of same spanning tree or vertices of different spanning trees._
+
+
 
 ---

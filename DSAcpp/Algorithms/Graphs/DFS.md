@@ -35,4 +35,4 @@ This statement simply means this:
 
 Consider the graph below:
 
-![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFSDiagraph.png?raw=true)
+![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/DFSDiagraph.png)

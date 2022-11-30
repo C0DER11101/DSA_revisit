@@ -18,7 +18,7 @@ Consider the graph below:
 
 **Remember one thing:**
 
-` The adjacent vertices of a vertex is/are searched only after removing it from the queue. `
+` The adjacent vertices of a vertex is/are searched only after removing that vertex from the queue. `
 
 
 ## Algorithm
@@ -77,7 +77,26 @@ Here, the traversal is shown with the help of a GIF.
 ![image](https://github.com/C0DER11101/DSA_revisit/blob/master/DSAcpp/Algorithms/Graphs/BFS.gif?raw=true)
 
 
-[More on BFS]
+# More on BFS
+
+Let's say that while performing BFS, we assign two values to each vertex in the graph - _a predecessor_ and _a distance value_.
+
+**Whenever we insert a vertex in the queue we set its predecessor and distance values.**
+
+**The predecessor of the starting vertex is taken as -1 or NIL.**
+
+**Distance value of starting vertex is taken as 0.**
+
+**The distance value of any other vertex is one more than the distance value of its predecessor.**
+
+**IF WE DRAW ONLY THOSE EDGES WHICH CONNECT A VERTEX TO ITS PREDECESSOR THEN WE GET A _SPANNING TREE_.**
+
+
+_BFS in an undirected graph is performed in the same manner as in a directed graph._
+
+## BFS to check connectivity of an undirected graph
+
+> _An undirected graph is said to be connected if we can visit all the vertices taking any arbitrary start vertex, and there is no need to choose another start vertex._
 
 
 ---
